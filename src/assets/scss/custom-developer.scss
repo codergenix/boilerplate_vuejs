@@ -1,0 +1,341 @@
+dx-license[buy-now*="https://go.devexpress.com/Licensing_Installer_Watermark_DevExtremeVue.aspx"] {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  max-height:0 !important;
+}
+*{box-sizing: border-box;}
+.text-6F777B {
+  color: #6F777B;
+}
+
+.text-212529 {
+  color: #212529;
+}
+
+.text-F1582C {
+  color: #F1582C;
+}
+.error-text {color: red;}
+.app-page {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  .app-content {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 5.5rem;
+    @at-root .dx-theme-compact & {
+      padding-top: 3.5rem;
+    }
+    &.dx-drawer-shrink{
+      .dx-drawer-panel-content {
+        height: auto;
+      }
+    } 
+    main {
+      padding: 1.5rem;
+    }
+
+    .breadCrumb-after-container {
+      position:relative;
+      padding-inline: 35px;
+    }
+
+    .app-menu {
+      width: 100%;
+      height: 100%;
+      padding: 0px 10px;
+      background-color: #F6F6F6;
+      @at-root [class*="-dark"] & {
+        background-color: #3f3f4b;
+      }
+      
+      .dx-treeview-toggle-item-visibility {
+        right: 0.5rem;
+        left: auto;
+      }
+      .menu-state-hover{
+        background-color: rgba(242, 87, 44, 0.09);
+        color: #f1582c;
+        @at-root [class*='dx-color-scheme-blue'] &  {  
+          background-color: rgba(2, 139, 201, 0.09);
+          color: #028bc9;
+         }
+         @at-root [class*="dx-color-scheme-lime"] & {  
+          background-color: rgba(184, 199, 35, 0.09);
+          color: #b8c723;
+         }
+         @at-root [class*="dx-color-scheme-orange"]  &{ 
+          background-color: rgba(242, 87, 44, 0.09);
+          color: #f1582c;
+         }
+         @at-root [class*="dx-color-scheme-purple"] & { 
+          background-color: rgba(125, 31, 141, 0.09);
+          color: #7d1f8d;
+         } 
+         @at-root [class*="dx-color-scheme-teal"] & { 
+          background-color: rgba(0, 150, 136, 0.09);
+          color: #009688;
+         }
+      }  
+      .menu-state-selected{
+        background-color: #f1582c;
+        @at-root [class*='dx-color-scheme-blue'] &  {
+          background-color: #028bc9;
+         }
+         @at-root [class*="dx-color-scheme-lime"] & {
+          background-color: #b8c723;
+         }
+         @at-root [class*="dx-color-scheme-orange"]  &{
+          background-color: #f1582c;
+         }
+         @at-root [class*="dx-color-scheme-purple"] & {
+          background-color: #7d1f8d;
+         }
+         @at-root [class*="dx-color-scheme-teal"] & {
+          background-color: #009688;
+         }
+      }
+      li:not([aria-expanded="true"]):not(.dx-state-selected) .dx-treeview-item.dx-state-hover {
+         @extend .menu-state-hover;
+      }
+
+      .dx-treeview-item-without-checkbox.dx-state-selected>.dx-treeview-item {
+        font-weight: bold;
+        @extend .menu-state-hover;
+      }
+
+      .dx-treeview-item-without-checkbox.dx-state-selected[aria-level="1"]>.dx-treeview-item {
+        font-weight: normal;
+        color: #ffffff;
+        @extend .menu-state-selected;
+      }
+
+      .dx-treeview-node-container:first-child {
+        margin-top: 10px;
+      }
+      li[aria-expanded=true]>.dx-item {
+        color: #fff;
+        transition-duration: 0.2s;
+        @extend .menu-state-selected;
+      }
+      li[aria-expanded=false]>.dx-item {
+        transition-duration: 0.2s;
+      }
+      .dx-treeview-toggle-item-visibility-opened {
+        color: #fff;
+        transition-delay: 0.5s;
+      }
+      .dx-treeview-toggle-item-visibility {
+        transition-delay: 0.5s;
+      }
+      ul .dx-treeview-node-container-opened {
+        text-indent: 5px;
+        color: #6f777b;
+        @at-root [class*="-dark"] & {
+          color: #d5d5d5;
+        }
+      }
+
+      .dx-treeview-node {
+        padding-left: 0px;
+        flex-wrap: nowrap;
+
+        .dx-treeview-item {
+          border-radius: 4px;
+          margin-top: 3px;
+          flex-direction: row-reverse;
+          .menu-item {
+            display: inline-flex;
+          }
+        }
+      }
+    }
+  }
+
+  .module-content {
+    &_header-title {
+      padding-left: 1rem;
+
+      h3 {
+        font-size: 1.25em;
+        font-weight: bold;
+      }
+    }
+  }
+  
+}
+.dx-field-item-label-text {
+  font-weight: 600;
+	color: #212529;
+  @at-root [class*="-dark"] & {
+    color: white;
+  }
+}
+hr {
+  height: 1px;
+  color: #DDDFDF4F;
+  margin-block: 17px;
+}
+
+.dx-button-content {
+  .material-symbols-outlined {
+    margin-inline: 10px;
+    font-size: 19px;
+  }
+}
+.dx-button-text,
+.dx-tab-content, 
+.dx-tab-text {
+  text-transform: none ;
+}
+/** default datagrid **/
+.dx-data-row.dx-state-hover:not(.dx-selection):not(.dx-row-inserted):not(.dx-row-removed):not(.dx-edit-row) > td:not(.dx-focused) {
+  cursor: pointer;
+}
+
+.theme-icon-disabled {
+  pointer-events: none;
+}
+
+.dx-datagrid {
+  .dx-gridbase-a11y-status-container {
+    display: none;
+  }
+
+  .dx-datagrid-headers {
+    & table {
+      border-bottom: 2px solid #DDDFDF;
+    }
+  }
+
+  .dx-datagrid-search-panel {
+    width: 357px;
+    max-width: 80vw;
+    margin-right: 20px;
+    &.dx-texteditor.dx-editor-filled {
+      &::after {
+        border-bottom: none;
+      }
+      .dx-texteditor-input-container {
+        .dx-placeholder::before,
+        .dx-texteditor-input {
+          padding-block:7px;
+        }
+      }
+    }
+  }
+
+  .dx-datagrid-table {
+    .dx-command-edit {
+      color: #6F777B;
+      @at-root [class*="-dark"] & {
+        color: #d5d5d5;
+      }
+      .dx-edit-delete,
+      .dx-cancel-save{cursor: pointer;}
+      .material-symbols-rounded {
+        font-size: 20px;
+      }
+    }
+  }
+  .user-name-with-photo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.dx-list-search{
+  &.dx-texteditor.dx-editor-filled 
+  {
+    .dx-placeholder::before,
+    .dx-texteditor-input{
+      padding-block:8px;
+    }
+  }
+}
+/** satus **/
+.dx-text-success {
+  color: green;
+}
+
+.dx-text-warning {
+  color: orange;
+}
+
+.dx-text-danger {
+  color: red;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/** meterial icon fill **/
+.material-symbols-rounded {
+  &.fill {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 200, "opsz" 24;
+  }
+}
+/**** textbox border default all *****/
+.dx-texteditor.dx-editor-filled.dx-text,
+.dx-texteditor.dx-editor-filled,
+.dx-texteditor {
+  border: 1px solid #DDDFDF;
+  border-radius: 4px;
+  background-color: white;
+  @at-root [class*="-dark"] & {
+    background-color: #363640;
+  }
+  &.dx-state-readonly,
+  &.dx-state-disabled {
+    pointer-events: none;
+    background-color: #eff0f0;
+    @at-root [class*="-dark"] & {
+      background-color: #62626a;
+    }
+    &.dx-widget {
+      opacity: 1;
+    }
+  }
+
+  &.dx-editor-filled::after {
+    border-bottom: none;
+  }
+}
+.dx-field-item-label-location-top {
+  padding-inline:0;
+}
+/**** toolbar in leftside static tab btn  *****/
+.dx-toolbar {
+  .dx-button-tab {
+    min-width: 55px;
+    border-radius: 0;
+    border-bottom: thin solid transparent;
+    .dx-button-content {
+      padding: 4px 0;
+      .dx-button-text {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+/***** dx popup header default *****/
+.dx-popup-title {
+  border-bottom: none;
+}
+/**** dx popup ******/
+.popup-title-cutom {
+  font-size: 25px;
+  margin-bottom: 19px;
+}
+
+/********/

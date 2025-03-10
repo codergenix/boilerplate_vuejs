@@ -1,29 +1,17 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue';
-import Antd from 'ant-design-vue';
-import SimpleVueValidation from 'simple-vue-validator';
-
-import 'ant-design-vue/dist/antd.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import './assets/css/main.css';
-
-import {store} from './store';
-import App from './App';
-import router from './router';
-
-Vue.config.productionTip = false;
-//Vue.config.devtools = false;
-
-Vue.use(Antd);
-Vue.use(SimpleVueValidation);
-
-/* eslint-disable no-new */
-/* eslint-disable*/
-new Vue({
-  el: '#app',
-  router,
-  store,
-  components: { App },
-  template: '<App/>'
-})
+import { createApp } from 'vue'
+// ----
+import createRouter from './router'
+import store from './store'
+import App from './App.vue'
+import appInfo from './app-info'
+import i18n from './i18n';
+//---
+const app = createApp(App)
+const router = createRouter(store)
+// ---
+app.use(store)
+app.use(router)
+app.use(i18n);
+// ----
+app.config.globalProperties.$appInfo = appInfo
+app.mount('#app')

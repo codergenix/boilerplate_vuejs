@@ -1,14 +1,14 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-import { Login } from './module/login';
-import { User } from './module/User';
-
-Vue.use(Vuex)
-
-export const store = new Vuex.Store({
+import { createStore } from 'vuex';
+// ---
+import auth from '@/store/auth.module';
+import profile from './profile.module';
+import users from './users.module';
+// -----
+export default createStore({
   modules: {
-    Login,
-    User
-  }
-})
+    auth,
+    users,
+    profile,
+  },
+  strict: true,
+});
